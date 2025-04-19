@@ -137,6 +137,12 @@ class DoublyLinkedList:
         self.tail.value = temp
         return True
 
+    def reverse(self):
+        temp = self.head
+        while temp is not None:
+            temp.next, temp.prev = temp.prev, temp.next
+            temp = temp.prev
+        self.head, self.tail = self.tail, self.head
 
 my_doubly_linked_list = DoublyLinkedList(1)
 my_doubly_linked_list.append(2)
