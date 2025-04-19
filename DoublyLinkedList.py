@@ -129,34 +129,25 @@ class DoublyLinkedList:
         self.length -= 1 
         return temp
 
-my_doubly_linked_list = DoublyLinkedList(11)
+    def swap_first_last(self):
+        if self.length == 0:
+            return False
+        temp = self.head.value
+        self.head.value = self.tail.value
+        self.tail.value = temp
+        return True
+
+
+my_doubly_linked_list = DoublyLinkedList(1)
+my_doubly_linked_list.append(2)
 my_doubly_linked_list.append(3)
-my_doubly_linked_list.append(23)
-my_doubly_linked_list.append(7)
+my_doubly_linked_list.append(4)
 
-print('DLL before set_value():')
+
+print('DLL before swap_first_last():')
 my_doubly_linked_list.print_list()
 
-my_doubly_linked_list.set_value(1,4)
+my_doubly_linked_list.swap_first_last()
 
-print('\nDLL after set_value():')
+print('\nDLL after swap_first_last():')
 my_doubly_linked_list.print_list()
-
-
-
-"""
-    EXPECTED OUTPUT:
-    ----------------
-    DLL before set_value():
-    11
-    3
-    23
-    7
-
-    DLL after set_value():
-    11
-    4
-    23
-    7
-
-"""
