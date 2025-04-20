@@ -1,96 +1,88 @@
-## Doubly Linked List in Python
+# Doubly Linked List in Python
 
-This project contains an implementation of a **Doubly Linked List** in Python. A doubly linked list is a type of linked list in which each node contains a reference to both the next and the previous node in the sequence.
+This project contains an implementation of a **Doubly Linked List** in Python.  
+A doubly linked list is a type of linked list in which each node contains a reference to both the next and the previous node in the sequence.
 
-### Features
+## Features
 
 - Create a new doubly linked list with an initial node
-- Append nodes to the end of the list
-- Prepend nodes to the beginning of the list
+- Append nodes to the end of the list (`append`)
+- Prepend nodes to the beginning of the list (`prepend`)
 - Remove the last node (`pop`)
 - Remove the first node (`pop_first`)
-- Get a node by index
-- Set the value of a node by index
-- Print the entire list
+- Get a node by index (`get`)
+- Set the value of a node by index (`set_value`)
+- Insert a node at a specific index (`insert`)
+- Remove a node at a specific index (`remove`)
+- Swap the values of the first and last nodes (`swap_first_last`)
+- Reverse the entire list (`reverse`)
+- Check if the list is a palindrome (`is_palindrome`)
+- Print the entire list (`print_list`)
 
-### Example Usage
+## Example Usage
 
-my_doubly_linked_list = DoublyLinkedList(11)
+```python
+my_doubly_linked_list = DoublyLinkedList(1)
+my_doubly_linked_list.append(2)
 my_doubly_linked_list.append(3)
-my_doubly_linked_list.append(23)
-my_doubly_linked_list.append(7)
+my_doubly_linked_list.append(2)
+my_doubly_linked_list.append(1)
 
-print('DLL before set_value():')
+print('Original DLL:')
 my_doubly_linked_list.print_list()
 
-my_doubly_linked_list.set_value(1, 4)
+print('\nIs Palindrome?', my_doubly_linked_list.is_palindrome())
 
-print('\nDLL after set_value():')
+my_doubly_linked_list.reverse()
+print('\nDLL after reverse():')
 my_doubly_linked_list.print_list()
-```
 
-### Expected Output
+my_doubly_linked_list.swap_first_last()
+print('\nDLL after swap_first_last():')
+my_doubly_linked_list.print_list()
 
-```
-DLL before set_value():
-11
-3
-23
-7
-
-DLL after set_value():
-11
-4
-23
-7
-```
 
 ---
 
-## Lista Duplamente Ligada em Python
+# Lista Duplamente Ligada em Python
 
-Este projeto contém uma implementação de uma **Lista Duplamente Ligada** em Python. Uma lista duplamente ligada é uma estrutura onde cada nó tem referência tanto para o próximo quanto para o nó anterior na sequência.
+Este projeto contém uma implementação de uma **Lista Duplamente Ligada** em Python.  
+Uma lista duplamente ligada é um tipo de lista encadeada em que cada nó contém uma referência tanto para o próximo quanto para o nó anterior na sequência.
 
-### Funcionalidades
+## Funcionalidades
 
 - Criar uma nova lista duplamente ligada com um nó inicial
-- Adicionar nós ao final da lista
-- Adicionar nós ao início da lista
+- Adicionar nós ao final da lista (`append`)
+- Adicionar nós ao início da lista (`prepend`)
 - Remover o último nó (`pop`)
 - Remover o primeiro nó (`pop_first`)
-- Obter um nó pelo índice
-- Alterar o valor de um nó pelo índice
-- Imprimir toda a lista
+- Obter um nó pelo índice (`get`)
+- Alterar o valor de um nó pelo índice (`set_value`)
+- Inserir um nó em um índice específico (`insert`)
+- Remover um nó em um índice específico (`remove`)
+- Trocar os valores do primeiro e do último nó (`swap_first_last`)
+- Reverter toda a lista (`reverse`)
+- Verificar se a lista é um palíndromo (`is_palindrome`)
+- Imprimir toda a lista (`print_list`)
 
-### Exemplo de Uso
+## Exemplo de Uso
 
-my_doubly_linked_list = DoublyLinkedList(11)
+```python
+my_doubly_linked_list = DoublyLinkedList(1)
+my_doubly_linked_list.append(2)
 my_doubly_linked_list.append(3)
-my_doubly_linked_list.append(23)
-my_doubly_linked_list.append(7)
+my_doubly_linked_list.append(2)
+my_doubly_linked_list.append(1)
 
-print('DLL before set_value():')
+print('Lista original:')
 my_doubly_linked_list.print_list()
 
-my_doubly_linked_list.set_value(1, 4)
+print('\nÉ palíndromo?', my_doubly_linked_list.is_palindrome())
 
-print('\nDLL after set_value():')
+my_doubly_linked_list.reverse()
+print('\nLista após reverse():')
 my_doubly_linked_list.print_list()
-```
 
-### Saída Esperada
-
-```
-DLL before set_value():
-11
-3
-23
-7
-
-DLL after set_value():
-11
-4
-23
-7
-```
-
+my_doubly_linked_list.swap_first_last()
+print('\nLista após swap_first_last():')
+my_doubly_linked_list.print_list()
