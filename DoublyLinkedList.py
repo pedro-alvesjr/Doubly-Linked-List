@@ -160,12 +160,38 @@ my_doubly_linked_list = DoublyLinkedList(1)
 my_doubly_linked_list.append(2)
 my_doubly_linked_list.append(3)
 my_doubly_linked_list.append(4)
+my_doubly_linked_list.append(5)
+my_doubly_linked_list.append(6)
 
+print('\nDLL after testing append() method:')
+my_doubly_linked_list.print_list()
 
-print('DLL before swap_first_last():')
+my_doubly_linked_list.pop()
+print('\nDLL after pop() method:')
+my_doubly_linked_list.print_list()
+
+my_doubly_linked_list.prepend(0)
+print('\nDLL after prepend(0):')
+my_doubly_linked_list.print_list()
+
+my_doubly_linked_list.set_value(5, 10)
+print('\nDLL after set_value(5, 10):')
+my_doubly_linked_list.print_list()
+
+my_doubly_linked_list.insert(3, 15)
+print('\nDLL after insert(3, 15):')
+my_doubly_linked_list.print_list()
+
+my_doubly_linked_list.remove(3)
+print('\nDLL after remove(3):')
 my_doubly_linked_list.print_list()
 
 my_doubly_linked_list.swap_first_last()
-
 print('\nDLL after swap_first_last():')
 my_doubly_linked_list.print_list()
+
+my_doubly_linked_list.reverse()
+print('\nDLL after reverse():')
+my_doubly_linked_list.print_list()
+
+print('\nTesting if DLL is_palindrome():', my_doubly_linked_list.is_palindrome())
