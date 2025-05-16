@@ -12,12 +12,14 @@ class DoublyLinkedList:
         self.tail = new_node
         self.length = 1
 
+
     def print_list(self):
         temp = self.head
         while temp is not None:
             print(temp.value)
             temp = temp.next
         
+
     def append(self, value):
         new_node = Node(value)
         if self.head is None:
@@ -155,6 +157,35 @@ class DoublyLinkedList:
             left = left.next
             right = right.prev
         return True
+    
+
+    def partition_list(self, x):
+        if self.head is None:
+            return None
+        
+        dummy1, dummy2 = Node(0), Node(0)
+        prev1, prev2 = dummy1, dummy2
+        current = self.head
+        
+        while current:
+            if current.value < x:
+                current.prev = prev1
+                prev1.next = current
+                prev1 = current
+            else:
+                current.prev = prev2
+                prev2.next = current
+                prev2 = current
+            current = current.next
+        
+        prev1.next = dummy2.next
+        if dummy2.next:
+            dummy2.next.prev = prev1
+        prev2.next = None
+        
+        self.head = dummy1.next
+        self.head.prev = None
+
 
 my_doubly_linked_list = DoublyLinkedList(1)
 my_doubly_linked_list.append(2)
@@ -195,3 +226,7 @@ print('\nDLL after reverse():')
 my_doubly_linked_list.print_list()
 
 print('\nTesting if DLL is_palindrome():', my_doubly_linked_list.is_palindrome())
+
+my_doubly_linked_list.partition_list()
+print('\nDLL after partition list:')
+my_doubly_linked_list.print_list
