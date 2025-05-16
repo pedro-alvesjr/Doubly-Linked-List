@@ -17,6 +17,7 @@ A doubly linked list is a type of linked list in which each node contains a refe
 - Swap the values of the first and last nodes (`swap_first_last`)
 - Reverse the entire list (`reverse`)
 - Check if the list is a palindrome (`is_palindrome`)
+- Partition the list around a value (`partition_list`)
 - Print the entire list (`print_list`)
 
 ## Example Usage
@@ -39,6 +40,10 @@ my_doubly_linked_list.print_list()
 
 my_doubly_linked_list.swap_first_last()
 print('\nDLL after swap_first_last():')
+my_doubly_linked_list.print_list()
+
+my_doubly_linked_list.partition_list(2)
+print('\nDLL after partition_list(2):')
 my_doubly_linked_list.print_list()
 
 
