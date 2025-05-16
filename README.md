@@ -68,26 +68,31 @@ Uma lista duplamente ligada é um tipo de lista encadeada em que cada nó conté
 - Trocar os valores do primeiro e do último nó (`swap_first_last`)
 - Reverter toda a lista (`reverse`)
 - Verificar se a lista é um palíndromo (`is_palindrome`)
+- Particionar a lista em torno de um valor (`partition_list`)
 - Imprimir toda a lista (`print_list`)
 
 ## Exemplo de Uso
 
 ```python
-my_doubly_linked_list = DoublyLinkedList(1)
-my_doubly_linked_list.append(2)
-my_doubly_linked_list.append(3)
-my_doubly_linked_list.append(2)
-my_doubly_linked_list.append(1)
+minha_lista_duplamente_ligada = DoublyLinkedList(1)
+minha_lista_duplamente_ligada.append(2)
+minha_lista_duplamente_ligada.append(3)
+minha_lista_duplamente_ligada.append(2)
+minha_lista_duplamente_ligada.append(1)
 
 print('Lista original:')
-my_doubly_linked_list.print_list()
+minha_lista_duplamente_ligada.print_list()
 
-print('\nÉ palíndromo?', my_doubly_linked_list.is_palindrome())
+print('\nÉ palíndromo?', minha_lista_duplamente_ligada.is_palindrome())
 
-my_doubly_linked_list.reverse()
+minha_lista_duplamente_ligada.reverse()
 print('\nLista após reverse():')
-my_doubly_linked_list.print_list()
+minha_lista_duplamente_ligada.print_list()
 
-my_doubly_linked_list.swap_first_last()
+minha_lista_duplamente_ligada.swap_first_last()
 print('\nLista após swap_first_last():')
-my_doubly_linked_list.print_list()
+minha_lista_duplamente_ligada.print_list()
+
+minha_lista_duplamente_ligada.partition_list(2)
+print('\nLista após partition_list(2):')
+minha_lista_duplamente_ligada.print_list()
