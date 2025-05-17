@@ -6,19 +6,20 @@ A doubly linked list is a type of linked list in which each node contains a refe
 ## Features
 
 - Create a new doubly linked list with an initial node
-- Append nodes to the end of the list (`append`)
-- Prepend nodes to the beginning of the list (`prepend`)
-- Remove the last node (`pop`)
-- Remove the first node (`pop_first`)
-- Get a node by index (`get`)
-- Set the value of a node by index (`set_value`)
-- Insert a node at a specific index (`insert`)
-- Remove a node at a specific index (`remove`)
-- Swap the values of the first and last nodes (`swap_first_last`)
-- Reverse the entire list (`reverse`)
-- Check if the list is a palindrome (`is_palindrome`)
-- Partition the list around a value (`partition_list`)
-- Print the entire list (`print_list`)
+- Append nodes to the end of the list (append)
+- Prepend nodes to the beginning of the list (prepend)
+- Remove the last node (pop)
+- Remove the first node (pop_first)
+- Get a node by index (get)
+- Set the value of a node by index (set_value)
+- Insert a node at a specific index (insert)
+- Remove a node at a specific index (remove)
+- Swap the values of the first and last nodes (swap_first_last)
+- Reverse the entire list (reverse)
+- Reverse a portion of the list between two indices (reverse_between)
+- Check if the list is a palindrome (is_palindrome)
+- Partition the list around a value (partition_list)
+- Print the entire list (print_list)
 
 ## Example Usage
 
@@ -45,7 +46,6 @@ my_doubly_linked_list.print_list()
 my_doubly_linked_list.partition_list(2)
 print('\nDLL after partition_list(2):')
 my_doubly_linked_list.print_list()
-
 
 ---
 
