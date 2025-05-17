@@ -256,10 +256,10 @@ my_doubly_linked_list.print_list()
 
 print('\nTesting if DLL is_palindrome():', my_doubly_linked_list.is_palindrome())
 
-my_doubly_linked_list.partition_list()
-print('\nDLL after partition list:')
-my_doubly_linked_list.print_list
+my_doubly_linked_list.partition_list(3)
+print('\nDLL after partition_list(3):')
+my_doubly_linked_list.print_list()
 
 my_doubly_linked_list.reverse_between(2, 5)
-print('\nDLL after reverse between:')
-my_doubly_linked_list.print_list
+print('\nDLL after reverse_between(2, 5):')
+my_doubly_linked_list.print_list()
