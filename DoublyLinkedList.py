@@ -186,6 +186,35 @@ class DoublyLinkedList:
         self.head = dummy1.next
         self.head.prev = None
 
+    def reverse_between(self, start_index, end_index):
+        if self.length <= 0 or start_index == end_index:
+            return
+        
+        dummy = Node(0)
+        dummy.next = self.head
+        self.head.prev = dummy
+        
+        prev = dummy
+        for i in range(start_index):
+            prev = prev.next
+            
+        current = prev.next
+        
+        for i in range(end_index - start_index):
+            node_to_move = current.next
+            
+            current.next = node_to_move.next
+            if node_to_move.next:
+                node_to_move.next.prev = current
+            
+            node_to_move.next = prev.next
+            prev.next.prev = node_to_move
+            prev.next = node_to_move
+            node_to_move.prev = prev
+            
+        self.head = dummy.next
+        self.head.prev = None
+
 
 my_doubly_linked_list = DoublyLinkedList(1)
 my_doubly_linked_list.append(2)
