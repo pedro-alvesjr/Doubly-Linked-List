@@ -67,6 +67,7 @@ Uma lista duplamente ligada é um tipo de lista encadeada em que cada nó conté
 - Remover um nó em um índice específico (`remove`)
 - Trocar os valores do primeiro e do último nó (`swap_first_last`)
 - Reverter toda a lista (`reverse`)
+- Reverter uma parte da lista entre dois índices (`reverse_between`)
 - Verificar se a lista é um palíndromo (`is_palindrome`)
 - Particionar a lista em torno de um valor (`partition_list`)
 - Imprimir toda a lista (`print_list`)
